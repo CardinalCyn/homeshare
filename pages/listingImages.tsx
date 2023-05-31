@@ -5,7 +5,7 @@ import { useRouter } from "next/router"
 import { listingData } from "../src/app/data/listingData"
 import { useState,useEffect } from 'react';
 import Image from 'next/image';
-const listingImages=()=>{
+const ListingImages=()=>{
     const router = useRouter();
     const id = router.query.id;
 
@@ -40,4 +40,4 @@ const listingImages=()=>{
     </div>)
 }
 
-export default listingImages
+export default ListingImages
