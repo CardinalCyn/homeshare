@@ -1,0 +1,20 @@
+export const cities = [
+    "Terlingua",
+    "Telluride",
+    "Perryville",
+    "Hardwick",
+    "Los Angeles",
+    "East Point",
+    "Hurricane",
+    "Kerhonkson",
+    "Maryville",
+    "West Farmington",
+    "Grandview",
+    "Lake Arrowhead",
+    "Putney",
+    "Greentown",
+    "La Grange",
+    "China Grove",
+    "Joshua Tree",
+    "Miami"
+];
