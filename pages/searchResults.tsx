@@ -8,7 +8,7 @@ import HomeListings from "@/app/components/HomeListings";
 import { homeListingType } from "@/app/types/homeListingType";
 import { useEffect, useState } from "react";
 import { filterType } from "@/app/types/filterType";
-const searchResults=()=>{
+const SearchResults=()=>{
     const router = useRouter();
     
     const [typeToFilterBy,setTypeToFilterBy]=useState<filterType>({city:"",type:""});
@@ -38,4 +38,4 @@ const searchResults=()=>{
     )
 }
 
-export default searchResults;
+export default SearchResults;

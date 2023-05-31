@@ -30,7 +30,7 @@ const Navbar=()=>{
       };
     const submitSearch=(e: MouseEvent<HTMLSpanElement>)=>{
         e.preventDefault();
-        router.push(`./searchResults/?area=${searchValue}`);
+        router.push(`./SearchResults/?area=${searchValue}`);
         setSearchValue("");
     }
 
