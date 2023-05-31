@@ -43,7 +43,7 @@ const Listing=()=>{
                 <div>Invalid Listing</div>
                 :<div>
                     {isMobile===true&&<Image key={`${currentListing["title"]}-img`} width={100} height={100} src={currentListing["info"]["mainImage"]["url"]} alt={currentListing["title"]} style={{width:'100%',height:'100%',marginLeft:"auto",marginRight:"auto"}}/>}
-                    {isMobile===true&&<button style={{marginTop:"20px",background: "#FF5A5F",color: "#fff",border: "none",padding: "10px 20px",borderRadius: "4px",fontSize: "16px",cursor: "pointer",}} onClick={()=>router.push(`./ListingImages/?id=${id}`)}>View more images</button>}
+                    {isMobile===true&&<button style={{marginTop:"20px",background: "#FF5A5F",color: "#fff",border: "none",padding: "10px 20px",borderRadius: "4px",fontSize: "16px",cursor: "pointer",}} onClick={()=>router.push(`./listingImages/?id=${id}`)}>View more images</button>}
                     <div className='mt-5' style={{fontSize:isMobile?'2em':'3em'}}>
                         {currentListing["info"]["title"]||""}
                     </div>
@@ -57,7 +57,7 @@ const Listing=()=>{
                             <Image key={`${currentListing["subImg2"]}-img`} width={400} height={400} src={currentListing["info"]["images"]["data"][1]["url"]} alt={currentListing["title"]} />
                         </div>
                     </div>}
-                    {isMobile===false&&<button type="button" onClick={()=>router.push(`./ListingImages/?id=${id}`)} style={{marginTop:"20px",background: "#FF5A5F",color: "#fff",border: "none",padding: "10px 20px",borderRadius: "4px",fontSize: "16px",cursor: "pointer",}}>View more images</button>}
+                    {isMobile===false&&<button type="button" onClick={()=>router.push(`./listingImages/?id=${id}`)} style={{marginTop:"20px",background: "#FF5A5F",color: "#fff",border: "none",padding: "10px 20px",borderRadius: "4px",fontSize: "16px",cursor: "pointer",}}>View more images</button>}
                     {isMobile?
                     <div style={{position: "fixed",bottom: 0,width: "100%",background: "#fff",padding: "20px",boxShadow: "0px -4px 10px rgba(0, 0, 0, 0.1)",zIndex:"99"}}>
                         <div className='flex' style={{ justifyContent: "space-between", alignItems: "center" }}>
