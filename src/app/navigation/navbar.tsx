@@ -14,8 +14,7 @@ const Navbar=()=>{
 
     const [datePickerVisible,setDatePickerVisible]=useState(false);
     
-    const [startDate, setStartDate] = useState<Date | null>(null);
-    const [endDate, setEndDate] = useState<Date | null>(null);
+    
 
     const [guestPickerVisibility,setGuestPickerVisibility]=useState(false);
     const [guestsToAdd,setGuestsToAdd]=useState<guestToAddType>({Adults:0,Children:0,Infants:0});
@@ -23,11 +22,14 @@ const Navbar=()=>{
     const [errorMessage,setErrorMessage]=useState("");
 
     const router=useRouter();
-    const onDateChange = (dates:Date[]) => {
+
+    const [startDate, setStartDate] = useState<Date | null>(null);
+    const [endDate, setEndDate] = useState<Date | null>(null);
+    const onDateChange = (dates: [Date | null, Date | null], event: React.SyntheticEvent<any, Event> | undefined) => {
         const [start, end] = dates;
         setStartDate(start);
         setEndDate(end);
-      };
+    };
     const submitSearch=(e: MouseEvent<HTMLSpanElement>)=>{
         e.preventDefault();
         router.push(`./SearchResults/?area=${searchValue}`);
